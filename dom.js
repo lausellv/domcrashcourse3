@@ -236,6 +236,7 @@ document.querySelector('.title').textContent = 'Changed';
 console.log(event);
 
 console.log(event.type);
+console.log(event.target);
 let target = event.target;
 target.classList.toggle('button--red');
 target.classList.toggle('button--green');
@@ -265,6 +266,18 @@ showLessButton.addEventListener('click', function(){
   showMoreButton.classList.add('visible');
 });
 
+let survey_form = document.querySelector('#survey_form');
+let isFormHidden = survey_form.classList.contains('hidden');
+console.log(isFormHidden);
+window.addEventListener('keydown', function(event){
+  let survey_form = document.querySelector('#survey_form');
+  let isFormHidden = survey_form.classList.contains('hidden');
+  if( !isFormHidden && event.key === 'Escape'){
+    survey_form.classList.add('hidden');   
+  } else if (isFormHidden && event.key === 'a'){
+    survey_form.classList.remove('hidden');
+  }
+});
 
 // //   // console.log(e.target);
 // //   // console.log(e.target.id);
