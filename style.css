@@ -1,13 +1,35 @@
 body {
-    text-align: center;
-  }
-  div {
-    background-color: lightblue;
-  }
-  button {
-    margin: 30px;
-    height: 30px;
-    width: 100px;
-  }
-  .button--red { background-color: tomato; }
-  .button--green { background-color: lightgreen; }
+  text-align: center;
+}
+div {
+  background-color: rgb(2, 152, 202);
+  color: black;
+  border-radius: 25px;
+}
+button {
+  border: solid;
+  background-color: lightblue;
+  height: 50px;
+  width: 100px;
+}
+.button--red {
+  background-color: tomato;
+  border-radius: 15px;
+  border: solid;
+  border-color: green;
+}
+.button--green {
+  background-color: lightgreen;
+  border-radius: 15px;
+  border: solid;
+  border-color: yellow;
+}
+
+.extra-content,
+button {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
